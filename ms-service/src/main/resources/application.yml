@@ -1,0 +1,27 @@
+spring:
+    datasource:
+        name: test
+        url: jdbc:sqlserver://10.8.1.112:1433;DatabaseName=yunying
+        username: dooiooadmin
+        password: dooioo
+        # 使用druid数据源
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+        filters: stat
+        maxActive: 20
+        initialSize: 1
+        maxWait: 60000
+        minIdle: 1
+        timeBetweenEvictionRunsMillis: 60000
+        minEvictableIdleTimeMillis: 300000
+        validationQuery: select 'x'
+        testWhileIdle: true
+        testOnBorrow: false
+        testOnReturn: false
+        poolPreparedStatements: true
+        maxOpenPreparedStatements: 20
+
+
+connection:
+    username: admin
+    remoteAddress: 192.168.1.1

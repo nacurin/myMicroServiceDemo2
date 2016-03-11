@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="TestMapper">
+    <!--根据版块名字查询版块基本信息-->
+    <select id="queryMapByName" parameterType="string" resultType="com.dooioo.fy.map.model.ZiroomMap">
+        SELECT
+        zm.id,
+        zm.areaName,
+        zm.directorName,
+        zm.disctrictName
+
+        FROM ziroomMap zm WITH (nolock)
+        WHERE zm.areaName = #{areaName}
+    </select>
+
+
+</mapper>
